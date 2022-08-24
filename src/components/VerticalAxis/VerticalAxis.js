@@ -1,15 +1,21 @@
-import './VerticalAxis.css';
-
+import "./VerticalAxis.css";
+import React, { useContext } from "react";
+import Store from "../store/store-context";
 
 const VerticalAxis = () => {
-    return (
-      <div className="vertical_metrics">
-        <div className="four">500</div>
-        <div className="third">20</div>
-        <div className="second">10</div>
-        <div className="first">0</div>
-      </div>
-    );
-}
+  const { v_metrics } = useContext(Store);
+
+  const metrics = v_metrics.map((el, i) => (
+    <div style={{ height: `${el.Ypercent}%` }} key={i}>
+      {el.V}
+    </div>
+  ));
+
+  return (
+    <div className="vertical_metrics">
+    {metrics}
+    </div>
+  );
+};
 
 export default VerticalAxis;

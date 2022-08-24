@@ -1,5 +1,4 @@
 .horizontal-metrics{
-  background-color: green;
   grid-area: 2/2/2/-1;
   width: 100%;
   height: 100%;
@@ -9,7 +8,6 @@
 .horizontal-metrics div {
   margin-left: 1rem;
   width: 5vw;
-  border: 1px solid;
   text-align: center;
   word-wrap: break-word;
   writing-mode: tb-rl; 
