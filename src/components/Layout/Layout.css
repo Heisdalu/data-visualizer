@@ -1,0 +1,15 @@
+.main-container {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 0.5fr 10fr;
+  grid-template-rows: 8fr;
+  place-items: center;
+  height: 500px;
+  border: 3px solid green;
+}
+
+@media screen and (min-width: 800px) {
+  .main-container {
+    grid-template-columns: 1fr 10fr;
+  }
+}

@@ -1,7 +1,13 @@
 import "./App.css";
+import Layout from "./components/Layout/Layout";
 
 const App = () => {
-  return <div className="main-container">hello world</div>;
+  return (
+    <>
+      <button className="regenerate">Regenerate data</button>
+      <Layout />
+    </>
+  );
 };
 
 export default App;
