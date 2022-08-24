@@ -13,6 +13,7 @@
   margin-top: auto;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  cursor: pointer;
 
   /* width: 5vw; // 540 screen */
   /* width: 2vw; // 280px screen */
@@ -26,4 +27,20 @@
 }
 .line:nth-child(7) {
   height: 70%;
+}
+
+.line span {
+    display: block;
+    background-color: wheat;
+    border-radius: 5px;
+    text-align: center;
+    padding: 0.5rem 0;
+    transform: translateY(-110%);
+    opacity: 0;
+}
+
+
+.line:hover span {
+    opacity: 1;
+    transition: opacity .6s;
 }
