@@ -1,10 +1,10 @@
 # DATA VISUALZER
-
 ## Table of contents
 
 - [](#)
   - [Table of contents](#table-of-contents)
     - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
     - [Links](#links)
     - [Built with](#built-with)
   - [Author](#author)
@@ -14,19 +14,28 @@
 Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
+- Use different colors for each bar in the histogram.
+- Add a button to refetch/regenerate the data (the endpoint will return random numbers each time).
+- On hovering over a bar in the histogram, change the color and show a label above the bar with the precise value.
+- Input their preferred range of number
 
+
+### Screenshot
+  ![histogram]('./../public/Data%20Visualizer.png)
 ### Links
 
 - Live Site URL: [click here]()
 
 ### Built with
 
+- React.js/ ContextApi
 - Mobile-first workflow
-- Semantic HTML5 markup
-- CSS custom properties
+- HTML5 
 - CSS Grid
-- REACT
 
+
+## Acknowledgements
+  Thanks to Frontendeval for putting this project for free on the internet🙏. 
 ## Author
 
 - Twitter - [@Dhevine_0X](https://www.twitter.com/Dhevine_0X)
