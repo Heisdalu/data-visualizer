@@ -1,6 +1,7 @@
 export const transformInput = (str) => {
   const reduceStringToObj = str
-     .split("\n") // split string into array
+    .split("\n") // split string into array
+    .sort((a, b) => a - b) // sort array in ascending order
     .filter((el) => el.trim() !== "") // remove not empty spaces
     .reduce((acc, cur) => {
       // reduce array into obj - how many times numbered appeared
