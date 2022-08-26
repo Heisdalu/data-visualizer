@@ -15,7 +15,7 @@
   cursor: pointer;
   height: 0;
   transition: all 1s;
-  width: 5vw;
+  width: 100%;
   margin-left: 1rem;
 }
 

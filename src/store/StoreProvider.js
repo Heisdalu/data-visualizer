@@ -10,7 +10,6 @@ const storeReducer = (state, action) => {
     };
   }
   if (action.type === "DATA_AVALIABLE") {
-    console.log(action);
     return {
       ...state,
       loading: false,
@@ -20,7 +19,6 @@ const storeReducer = (state, action) => {
     };
   }
   if (action.type === "UPDATE_USER_RANGE") {
-    console.log(action);
     return {
       ...state,
       userObj: action.userRangeObj

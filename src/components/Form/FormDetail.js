@@ -14,7 +14,6 @@ const FormDetail = (props) => {
 
     // if minimum number is greater thn max number -reject
     if (minVal >= maxVal) {
-      console.log("error");
       setError({ data: true, message: "max number must be greater" });
       return;
     }
@@ -32,7 +31,6 @@ const FormDetail = (props) => {
       maxVal >= -10000 &&
       maxVal <= 10000
     ) {
-      console.log("correct");
       setError({ data: false, message: "" });
       storeUpdate({
         type: "UPDATE_USER_RANGE",
