@@ -10,16 +10,26 @@ const storeReducer = (state, action) => {
     };
   }
   if (action.type === "DATA_AVALIABLE") {
+    console.log(action);
     return {
+      ...state,
       loading: false,
       v_metrics: action.v_axisTransform.V_metrics,
       x_axis: action.axis_detail.H_axis,
       chartLine: action.v_axisTransform.chartDetail,
     };
   }
+  if (action.type === "UPDATE_USER_RANGE") {
+    console.log(action);
+    return {
+      ...state,
+      userObj: action.userRangeObj
+    };
+  }
 
   if (action.type === "ERROR") {
     return {
+      ...state,
       loading: false,
       error: true,
       v_metrics: [],
@@ -37,6 +47,7 @@ const intialObj = {
   v_metrics: [],
   x_axis: [],
   chartLine: [],
+  userObj: {min: 1, max: 10}
 };
 
 const StoreProvider = ({ children }) => {

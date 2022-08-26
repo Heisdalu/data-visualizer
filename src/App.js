@@ -4,6 +4,7 @@ import Form from "./components/Form/Form";
 import Layout from "./components/Layout/Layout";
 import Loading from "./components/Loading/Loading";
 import Store from "./store/store-context";
+import Refetch from "./components/Refetch/Refetch";
 
 const App = () => {
   const { loading, storeUpdate, error } = useContext(Store);
@@ -14,9 +15,7 @@ const App = () => {
   return (
     <>
       <Form />
-      {!loading && !error && (
-        <button className="regenerate">Regenerate data</button>
-      )}
+      {!loading && !error && <Refetch />}
       {!loading && !error && <Layout />}
       {loading && <Loading />}
       {!loading && error && <div>Error... Refresh again</div>}
