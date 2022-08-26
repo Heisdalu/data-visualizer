@@ -10,6 +10,9 @@
   writing-mode: vertical-lr;
 }
 
+.vertical_metrics div:first-child {
+  opacity: 0;
+}
 
 @media screen and (min-width: 800px){
     .vertical_metrics div {

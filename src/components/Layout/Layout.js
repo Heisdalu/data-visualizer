@@ -7,6 +7,7 @@ import "./Layout.css";
 import { transformInput } from "../../lib/transformInput.js";
 import { transformVaxis } from "../../lib/transformVaxis";
 import Store from "../../store/store-context";
+import { DATA_AVALIABLE, ERROR } from "../../lib/types";
 
 const Layout = () => {
   const { storeUpdate, userObj } = useContext(Store);
@@ -22,12 +23,12 @@ const Layout = () => {
       const v_axisTransform = transformVaxis(axis_detail.V_arr);
 
       storeUpdate({
-        type: "DATA_AVALIABLE",
+        type: DATA_AVALIABLE,
         axis_detail,
         v_axisTransform,
       });
     } catch (err) {
-      storeUpdate({ type: "ERROR" });
+      storeUpdate({ type: ERROR });
     }
   }, [storeUpdate, userObj]);
 

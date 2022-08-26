@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { UPDATE_USER_RANGE } from "../../lib/types";
 import Store from "../../store/store-context";
 import "./Refetch.css";
 
@@ -11,7 +12,7 @@ const Refetch = () => {
   // generate random values
   const refetchHandler = () => {
     storeUpdate({
-      type: "UPDATE_USER_RANGE",
+      type: UPDATE_USER_RANGE,
       userRangeObj: { min: minRandom, max: maxRandom },
     });
   };

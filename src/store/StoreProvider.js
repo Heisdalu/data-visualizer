@@ -1,15 +1,16 @@
 import React, { useCallback, useReducer } from "react";
+import { LOADING, DATA_AVALIABLE, UPDATE_USER_RANGE, ERROR } from "../lib/types";
 import Store from "./store-context";
 
 const storeReducer = (state, action) => {
-  if (action.type === "LOADING") {
+  if (action.type === LOADING) {
     return {
       ...state,
       loading: true,
       error: false,
     };
   }
-  if (action.type === "DATA_AVALIABLE") {
+  if (action.type === DATA_AVALIABLE) {
     return {
       ...state,
       loading: false,
@@ -18,14 +19,14 @@ const storeReducer = (state, action) => {
       chartLine: action.v_axisTransform.chartDetail,
     };
   }
-  if (action.type === "UPDATE_USER_RANGE") {
+  if (action.type === UPDATE_USER_RANGE) {
     return {
       ...state,
-      userObj: action.userRangeObj
+      userObj: action.userRangeObj,
     };
   }
 
-  if (action.type === "ERROR") {
+  if (action.type === ERROR) {
     return {
       ...state,
       loading: false,
@@ -45,7 +46,7 @@ const intialObj = {
   v_metrics: [],
   x_axis: [],
   chartLine: [],
-  userObj: {min: 1, max: 10}
+  userObj: { min: 1, max: 10 },
 };
 
 const StoreProvider = ({ children }) => {

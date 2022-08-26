@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import Store from "../../store/store-context";
-// import randomColor from "../lib/randomColor";
 import { randomColor } from "../../lib/randomColor";
 import "./Chart.css";
 

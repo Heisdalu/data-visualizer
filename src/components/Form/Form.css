@@ -7,6 +7,12 @@
   background-color: black;
   border-radius: 50%;
   z-index: 111;
+  cursor: pointer;
+}
+
+.nav-pointer:hover{
+  transform: scale(0.8);
+  transition: all .7s;
 }
 
 .nav-pointer::after {
@@ -78,6 +84,7 @@ label {
   border-radius: 5px;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {

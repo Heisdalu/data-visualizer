@@ -1,4 +1,5 @@
 import React, { useContext, useRef, useState } from "react";
+import { UPDATE_USER_RANGE } from "../../lib/types";
 import Store from "../../store/store-context";
 import "./Form.css";
 
@@ -33,7 +34,7 @@ const FormDetail = (props) => {
     ) {
       setError({ data: false, message: "" });
       storeUpdate({
-        type: "UPDATE_USER_RANGE",
+        type: UPDATE_USER_RANGE,
         userRangeObj: { min: minVal, max: maxVal },
       });
       maxRef.current.value = minRef.current.value = "";

@@ -18,8 +18,8 @@ export const transformInput = (str) => {
     const [key, value] = arr;
     // push keys as horizontal axis
     // push values into V_values to solve its height percentage
-    H_values.push(key);
-    V_values.push(value);
+    H_values.unshift(key);
+    V_values.unshift(value);
   }
 
   return {

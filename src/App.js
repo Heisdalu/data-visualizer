@@ -5,12 +5,13 @@ import Layout from "./components/Layout/Layout";
 import Loading from "./components/Loading/Loading";
 import Store from "./store/store-context";
 import Refetch from "./components/Refetch/Refetch";
+import { LOADING } from "./lib/types";
 
 const App = () => {
   const { loading, storeUpdate, error } = useContext(Store);
 
   useEffect(() => {
-    storeUpdate({ type: "LOADING" });
+    storeUpdate({ type: LOADING });
   }, [storeUpdate]);
   return (
     <>
