@@ -1,6 +1,6 @@
 import "./VerticalAxis.css";
 import React, { useContext } from "react";
-import Store from "../store/store-context";
+import Store from "../../store/store-context";
 
 const VerticalAxis = () => {
   const { v_metrics } = useContext(Store);

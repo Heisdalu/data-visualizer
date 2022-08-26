@@ -6,10 +6,10 @@ const storeReducer = (state, action) => {
     return {
       ...state,
       loading: true,
+      error: false,
     };
   }
   if (action.type === "DATA_AVALIABLE") {
-
     return {
       loading: false,
       v_metrics: action.v_axisTransform.V_metrics,
@@ -21,6 +21,7 @@ const storeReducer = (state, action) => {
   if (action.type === "ERROR") {
     return {
       loading: false,
+      error: true,
       v_metrics: [],
       x_axis: [],
       chartLine: [],
@@ -32,6 +33,7 @@ const storeReducer = (state, action) => {
 
 const intialObj = {
   loading: false,
+  error: false,
   v_metrics: [],
   x_axis: [],
   chartLine: [],

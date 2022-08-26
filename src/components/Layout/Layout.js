@@ -4,9 +4,9 @@ import HorizontalAxis from "../HorizontalAxis/HorizontalAxis";
 import VerticalAxis from "../VerticalAxis/VerticalAxis";
 import axios from "axios";
 import "./Layout.css";
-import { transformInput } from "../lib/transformInput.js";
-import { transformVaxis } from "../lib/transformVaxis";
-import Store from "../store/store-context";
+import { transformInput } from "../../lib/transformInput.js";
+import { transformVaxis } from "../../lib/transformVaxis";
+import Store from "../../store/store-context";
 
 const Layout = () => {
   const storeCtx = useContext(Store);

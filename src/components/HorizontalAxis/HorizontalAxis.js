@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import Store from "../store/store-context";
+import Store from "../../store/store-context";
 import "./HorizontalAxis.css";
 
 const HorizontalAxis = () => {
