@@ -10,9 +10,9 @@
   cursor: pointer;
 }
 
-.nav-pointer:hover{
+.nav-pointer:hover {
   transform: scale(0.8);
-  transition: all .7s;
+  transition: all 0.7s;
 }
 
 .nav-pointer::after {
@@ -85,6 +85,14 @@ label {
   border: none;
   outline: none;
   cursor: pointer;
+  background-color: #ffffff;
+  color: black;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.submit-btn:active{
+  background-color: #ffffff;
+  color: #000000;
 }
 
 @media screen and (min-width: 768px) {

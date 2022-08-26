@@ -24,7 +24,7 @@ Users should be able to:
   ![histogram]('./../public/Data%20Visualizer.png)
 ### Links
 
-- Live Site URL: [click here]()
+- Live Site URL: [click here](https://daalu-data-visualizer.netlify.app/)
 
 ### Built with
 
