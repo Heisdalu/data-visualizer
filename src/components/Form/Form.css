@@ -68,6 +68,11 @@ label {
   outline: none;
 }
 
+.error {
+  color: rgba(255, 0, 0, 0.825);
+  padding: 0.5rem 0;
+}
+
 .submit-btn {
   padding: 0.5rem 1rem;
   border-radius: 5px;
