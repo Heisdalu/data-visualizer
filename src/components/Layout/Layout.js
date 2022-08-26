@@ -16,7 +16,7 @@ const Layout = () => {
 
     try {
       const request = await axios.get(
-        `https://www.random.org/integers/?num=300&min=${userObj.min}&max=${userObj.max}&col=1&base=10&format=plain&rnd=new`
+        `https://www.random.org/integers/?num=500&min=${userObj.min}&max=${userObj.max}&col=1&base=10&format=plain&rnd=new`
       );
 
       const axis_detail = transformInput(request.data);
