@@ -66,6 +66,7 @@ const FormDetail = (props) => {
               type="number"
               id="min"
               placeholder="Type a number"
+              autoComplete="off"
               ref={minRef}
               // onInput={(e) => (e.target.value = e.target.value.slice(0, 6))}
             />
@@ -76,6 +77,7 @@ const FormDetail = (props) => {
               type="number"
               id="max"
               placeholder="Type a number"
+              autoComplete="off"
               ref={maxRef}
               // onInput={(e) => (e.target.value = e.target.value.slice(0, 5))}
             />

@@ -1,4 +1,4 @@
-import { useCallback, useContext, useEffect } from "react";
+import { useCallback, useContext, useEffect, useRef } from "react";
 import Chart from "../Chart/Chart";
 import HorizontalAxis from "../HorizontalAxis/HorizontalAxis";
 import VerticalAxis from "../VerticalAxis/VerticalAxis";
@@ -11,6 +11,7 @@ import { DATA_AVALIABLE, ERROR } from "../../lib/types";
 
 const Layout = () => {
   const { storeUpdate, userObj } = useContext(Store);
+  const mainRef = useRef();
 
   const func = useCallback(async () => {
 
@@ -31,14 +32,15 @@ const Layout = () => {
       storeUpdate({ type: ERROR });
     }
   }, [storeUpdate, userObj]);
-
+  
   useEffect(() => {
     func();
+    mainRef.current.scrollTo({ left: 0, behavior: "smooth" });
   }, [func]);
 
   return (
     <>
-      <div className="main-container">
+      <div className="main-container" ref={mainRef}>
         <VerticalAxis />
         <Chart />
         <HorizontalAxis />
